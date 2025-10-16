@@ -1,19 +1,18 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+//import {StringLiteral} from "typescript"
 var blogs = [
     {
         title: "Introduction to AI",
         date: "October 16, 2025",
         description: "The use of artificial intelligence has ramped up in the\n     past few uears and is now apart of many of our daily lives. Learn more about complex concepts \n     like machine leanring, explore the ethical aspect of AI, and learn about real-world application!",
-        image: "string.jpg",
+        image: "download.jpg",
         imageAlt: "neural networks in brain",
         slug: "https://sdodds.com/blogs/intro-to-ai"
     },
     {
         title: "The Magic of Recursion",
-        date: "October 16, 2025",
+        date: "October 10, 2025",
         description: "Recursion is when a function calls itself to solve smaller pieces \nof a problem before coming to the one at hand. Using recursion, code size can significantly decrease and\nmany problems become easier to solve.",
-        image: "recursion.jpg",
+        image: "download.png",
         imageAlt: "infinity mirrors showing recursion",
         slug: "https://sdodds.com/blogs/the-magic-of-recursion"
     }
