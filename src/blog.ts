@@ -1,4 +1,4 @@
-import { StringLiteral } from "typescript"
+import {StringLiteral} from "typescript"
 
 type Blog = {
     title: string;

@@ -9,8 +9,8 @@
     // See also https://aka.ms/tsconfig/module
     "module": "nodenext",
     "target": "esnext",
-    "types": [],
     "lib": ["es2015", "dom"], 
+    "types": [],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
