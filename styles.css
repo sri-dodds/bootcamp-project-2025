@@ -112,13 +112,3 @@ div {
   border-top: 1px solid #000;
   border-left: 2px solid #fff;
 }
-a.blog-post-link {
-  display: block;
-  color: blue;          /* Link color */
-  text-decoration: underline; /* Show underline */
-  cursor: pointer;
-}
-
-a.blog-post-link:hover {
-  color: darkblue;
-}

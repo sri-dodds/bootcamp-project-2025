@@ -14,7 +14,7 @@ var blogs = [
         description: "Recursion is when a function calls itself to solve smaller pieces \nof a problem before coming to the one at hand. Using recursion, code size can significantly decrease and\nmany problems become easier to solve.",
         image: "download.png",
         imageAlt: "infinity mirrors showing recursion",
-        slug: "the-magic-of-recursion"
+        slug: "magic-of-recursion"
     }
 ];
 var blogContainer = document.getElementById('blog-container');
