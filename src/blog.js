@@ -19,27 +19,19 @@ var blogs = [
     }
 ];
 var blogContainer = document.getElementById('blog-container');
-function displayBlogs(blogs) {
-    blogs.forEach(function (blog) {
-        var blogDiv = document.createElement('div');
-        var title = document.createElement("h1");
-        title.textContent = blog.title;
-        // Create date element
-        var date = document.createElement('January 1, 2020');
-        date.textContent = blog.date;
-        // Create description element
-        var description = document.createElement('p');
-        description.textContent = blog.description;
-        // Create image element
-        var image = document.createElement("img");
-        image.src = blog.image;
-        image.alt = blog.imageAlt;
-        // Append elements to blogDiv
-        blogDiv.appendChild(title);
-        blogDiv.appendChild(date);
-        blogDiv.appendChild(image);
-        blogDiv.appendChild(description);
-        // Append blogDiv to container
-        blogContainer.appendChild(blogDiv);
-    });
-}
+blogs.forEach(function (blog) {
+    var blogDiv = document.createElement('div');
+    blogDiv.className = "blog-post-container";
+    var title = document.createElement("h1");
+    title.textContent = blog.title;
+    var date = document.createElement("h2");
+    date.textContent = blog.date;
+    var description = document.createElement("p");
+    description.textContent = blog.description;
+    var image = document.createElement("img");
+    image.src = blog.image;
+    image.alt = blog.imageAlt;
+    blogDiv.append(title, date, image, description);
+    if (blogContainer)
+        blogContainer.append(blogDiv);
+});
