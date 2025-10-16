@@ -48,10 +48,15 @@ blogs.forEach((blog) => {
     const image = document.createElement("img");
     image.src = blog.image;
     image.alt = blog.imageAlt;
+
+    const blogLink = document.createElement('a');
+    blogLink.href = "blogs/" + blog.slug + ".html";;
+    
     
     blogDiv.append(title, date, image, description);
+    blogLink.append(blogDiv);
     if (blogContainer)
-        blogContainer.append(blogDiv);
+        blogContainer.append(blogLink);
 });
 
 

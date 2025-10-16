@@ -6,7 +6,7 @@ var blogs = [
         description: "The use of artificial intelligence has ramped up in the\n     past few uears and is now apart of many of our daily lives. Learn more about complex concepts \n     like machine leanring, explore the ethical aspect of AI, and learn about real-world application!",
         image: "download.jpg",
         imageAlt: "neural networks in brain",
-        slug: "https://sdodds.com/blogs/intro-to-ai"
+        slug: "intro-to-ai"
     },
     {
         title: "The Magic of Recursion",
@@ -14,11 +14,13 @@ var blogs = [
         description: "Recursion is when a function calls itself to solve smaller pieces \nof a problem before coming to the one at hand. Using recursion, code size can significantly decrease and\nmany problems become easier to solve.",
         image: "download.png",
         imageAlt: "infinity mirrors showing recursion",
-        slug: "https://sdodds.com/blogs/the-magic-of-recursion"
+        slug: "the-magic-of-recursion"
     }
 ];
 var blogContainer = document.getElementById('blog-container');
 blogs.forEach(function (blog) {
+    var blogLink = document.createElement('a');
+    blogLink.href = "blogs/" + blog.slug + ".html";  // Link to individual blog page
     var blogDiv = document.createElement('div');
     blogDiv.className = "blog-post-container";
     var title = document.createElement("h1");
@@ -30,7 +32,9 @@ blogs.forEach(function (blog) {
     var image = document.createElement("img");
     image.src = blog.image;
     image.alt = blog.imageAlt;
-    blogDiv.append(title, date, image, description);
+
+    blogDiv.append(title,date, image, description);
+    blogLink.append(blogDiv)
     if (blogContainer)
-        blogContainer.append(blogDiv);
+        blogContainer.append(blogLink);
 });
