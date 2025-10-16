@@ -31,4 +31,27 @@ many problems become easier to solve.`,
         slug: "https://sdodds.com/blogs/the-magic-of-recursion"
     }
 ]
+const blogContainer = document.getElementById('blog-container');
+blogs.forEach((blog) => {
+    const blogDiv = document.createElement('div');
+    blogDiv.className="blog-post-container"
+
+    const title = document.createElement("h1");
+    title.textContent = blog.title;
+
+    const date = document.createElement("h2");
+    date.textContent = blog.date;
+
+    const description = document.createElement("p");
+    description.textContent = blog.description;
+
+    const image = document.createElement("img");
+    image.src = blog.image;
+    image.alt = blog.imageAlt;
+    
+    blogDiv.append(title, date, image, description);
+    if (blogContainer)
+        blogContainer.append(blogDiv);
+});
+
 
