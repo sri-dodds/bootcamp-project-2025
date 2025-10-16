@@ -18,7 +18,7 @@ const blogs: Blog[] = [
      like machine leanring, explore the ethical aspect of AI, and learn about real-world application!`,
         image: "downloas.jpg",
         imageAlt: "neural networks in brain",
-        slug: "https://sdodds.com/blogs/intro-to-ai"
+        slug: "intro-to-ai"
     },
     {
         title: "The Magic of Recursion",
@@ -28,7 +28,7 @@ of a problem before coming to the one at hand. Using recursion, code size can si
 many problems become easier to solve.`,
         image: "download.png",
         imageAlt: "infinity mirrors showing recursion",
-        slug: "https://sdodds.com/blogs/the-magic-of-recursion"
+        slug: "the-magic-of-recursion"
     }
 ]
 const blogContainer = document.getElementById('blog-container');
