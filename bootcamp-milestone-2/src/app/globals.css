@@ -100,20 +100,18 @@ p {
 p {
   margin: 1px 5px 10px 20px;
 }
-div {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #000;
+
+#contact-form input,
+#contact-form textarea,
+
+.entry {
+  border: 1px solid #000; /* black border on all sides */
+  border-radius: 5px;     
+  padding: 15px;           
+  margin-bottom: 20px;     
 }
 
-div {
-  border: 1px solid #000;
-}
 
-div {
-  border-top: 1px solid #000;
-  border-left: 2px solid #fff;
-}
 
 .about-image {
   display: flex;
@@ -127,3 +125,137 @@ div {
   display: block;
   border-radius: 10px; /* optional: rounded corners */
 }
+
+.contact-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.contact-intro {
+  margin-bottom: 2rem; /* space between text and form */
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* space between fields */
+  margin-bottom: 2rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 0.75rem;
+  border: 2px solid #ccc; /* box border */
+  border-radius: 8px;     /* rounded corners */
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: seagreen; /* highlight box on focus */
+  outline: none;
+}
+
+#contact-form input[type="submit"] {
+  background-color: seagreen;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contact-form input[type="submit"]:hover {
+  background-color: #2e8b57; /* slightly darker green on hover */
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+/* Resume Page Layout */
+.resume-main {
+  max-width: 900px; /* keeps content from stretching too wide */
+  margin: 0 auto; /* center page horizontally */
+  padding: 40px 20px; /* spacing around content */
+  text-align: left; /* make all text left-aligned */
+  line-height: 1.6; /* improve readability */
+}
+
+.resume-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.download-link {
+  display: inline-block;
+  margin-bottom: 40px;
+  padding: 10px 20px;
+  background-color: seagreen;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.section {
+  margin-bottom: 40px; /* space between sections */
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid seagreen; /* optional underline */
+  padding-bottom: 5px;
+}
+
+.entry {
+  margin-bottom: 20px; /* space between entries */
+}
+
+.entry-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.entry-info {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.skill-list,
+.course-list {
+  list-style-type: disc;
+  padding-left: 20px; /* indent lists */
+}
+
+ul li {
+  margin-bottom: 8px; /* space between list items */
+}
+
+/* Flex container for side-by-side sections */
+.side-by-side {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* make text align left */
+  text-align: left; /* important! */
+}
+
+
+/* Each column */
+.column {
+  flex: 1; /* each column takes equal space */
+  min-width: 250px; /* prevents shrinking too small */
+}
+
+/* Lists remain left-aligned */
+.column ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+
+

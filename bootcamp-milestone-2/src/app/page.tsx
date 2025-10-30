@@ -1,23 +1,19 @@
 // You can name the function within page.tsx anything you want.
+import Link from "next/link";
 export default function Home() {
   return (
     <div>
       {/* Head metadata (title, fonts, etc.) should go in layout.tsx or <Head> */}
       <nav className="navbar">
         <h1 className="logo">
-          <a href="index.html">Srinithi&apos;s Personal Website</a>
+          
         </h1>
-        <ul className="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
       </nav>
 
       <main>
-        <h1 className="nostyle">Welcome!</h1>
+        <h1 className="nostyle">
+         <p></p>Welcome!
+          </h1>
         <div className="about">
           <div className="about-image">
             <img
@@ -44,7 +40,7 @@ export default function Home() {
       </main>
 
       <footer className="footer">
-        © 2023 Srinithi&apos;s Personal Website | All Rights Reserved
+        © 2025 Srinithi's Personal Website | All Rights Reserved
       </footer>
     </div>
   ); 

@@ -1,6 +1,8 @@
-
+"use client"
 import React, { useEffect } from "react";
-import "./styles.css";
+import Link from "next/link";
+import "../globals.css";
+import BlogPreview from '@/components/blogPreview;
 
 export default function BlogPage() {
   useEffect(() => {
@@ -13,16 +15,6 @@ export default function BlogPage() {
   return (
     <div>
       <nav className="navbar">
-        <h1 className="logo">
-          <a href="index.html">Srinithi&apos;s Personal Website</a>
-        </h1>
-        <ul className="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
       </nav>
 
       <main>
@@ -37,5 +29,9 @@ export default function BlogPage() {
         © 2025 Srinithi&apos;s Personal Website | All Rights Reserved
       </footer>
     </div>
+    {blogs.map(blog => 
+      <BlogPreview /> // This is how we call the component
+		)}
+    
   );
 }
