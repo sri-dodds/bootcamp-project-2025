@@ -1,25 +1,22 @@
 import React from 'react';
-import style from './BlogPreview.module.css';
+import style from './blogPreview.module.css'
 import Image from 'next/image';
-import Link from 'next/link';
-import type { Blog } from @/typings/blog"
+import { Blog } from '../app/blog/blogData';
+import Link from "next/link";
 
-type BlogPreviewProps = {
-  title: string;
-  date: string;
-  description: string;
-  image: string;
-  slug: string;
-};
-
-export default function BlogPreview({ title, date, description, image, slug }: BlogPreviewProps) {
+export default function BlogPreview(props: Blog) {
   return (
-    <div className={style.blogCard}>
-      <h3>{title}</h3>
-      <Image src={image} alt={title} width={500} height={300} />
-      <p>{description}</p>
-      <p>{date}</p>
-      <Link href={`/blog/${slug}`}>Read More</Link>
-    </div>
+     <Link href={`/blog/${props.href}`} className={style.blogLink}>
+      <div className={style.blogPreview}>
+        <h3>{props.title}</h3>
+        <div>
+          <Image src={props.image} alt={props.imageAlt} width={500} height={500} />
+          <p>{props.description}</p>
+          <p>{props.date}</p>
+        </div>
+      </div>
+    </Link>
   );
 }
+
+

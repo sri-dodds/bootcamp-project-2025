@@ -1,37 +1,32 @@
-"use client"
-import React, { useEffect } from "react";
-import Link from "next/link";
-import "../globals.css";
-import BlogPreview from '@/components/blogPreview;
+import React from "react";
+import BlogPreview from "../../components/blogPreview";
+import { blogs, type Blog}  from "./blogData";
 
 export default function BlogPage() {
-  useEffect(() => {
-    // Optional: If your blog.js adds content dynamically, 
-    // you can import and run that logic here instead.
-    // Example: dynamically load content or call APIs.
-    console.log("Blog page loaded");
-  }, []);
-
   return (
-    <div>
-      <nav className="navbar">
-      </nav>
+    <main style={{ padding: "40px 20px" }}>
+      <h1>
+        Personal Blog
+      </h1>
 
-      <main>
-        <h2 className="blog">Personal Blog</h2>
-        <p>Welcome to my Blog!</p>
-
-        {/* Blog container for dynamic content */}
-        <div id="blog-container"></div>
-      </main>
+      <div>
+        {blogs.map((blog) => (
+          <BlogPreview
+            key={blog.href} // unique key for React
+            title={blog.title}
+            description={blog.description}
+            date={blog.date}
+            image={blog.image}
+            imageAlt={blog.imageAlt}
+            href={blog.href}
+            content = {blog.content}
+          />
+        ))}
+      </div>
 
       <footer className="footer">
-        © 2025 Srinithi&apos;s Personal Website | All Rights Reserved
+        © 2025 Srinithi's Personal Website | All Rights Reserved
       </footer>
-    </div>
-    {blogs.map(blog => 
-      <BlogPreview /> // This is how we call the component
-		)}
-    
+    </main>
   );
 }
