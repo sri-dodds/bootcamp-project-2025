@@ -1,8 +1,8 @@
 import connectDB from "../../database/db";
 import Blog from "../../database/blogSchema";
+import Link from "next/link";
 
 export default async function BlogPage() {
-  // Fetch blogs from MongoDB
   const blogs = await getBlogs();
 
   if (!blogs) {
@@ -21,9 +21,19 @@ export default async function BlogPage() {
       <div>
         {blogs.map((blog: any) => (
           <article key={blog._id}>
-            <h2>{blog.title}</h2>
+            <h2>
+              <Link href={`/blog/${blog.slug}`}>
+                {blog.title}
+              </Link>
+            </h2>
             <p>{blog.description}</p>
             <small>{new Date(blog.date).toLocaleDateString()}</small>
+            {blog.image && (
+              <img
+                src={blog.image}
+                alt={blog.imageAlt || blog.title}
+              />
+            )}
           </article>
         ))}
       </div>
