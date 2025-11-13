@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function BlogPreview(props: Blog) {
   return (
-     <Link href={`/blog/${props.href}`} className={style.blogLink}>
+     <Link href={`/blog/${props.slug}`} className={style.blogLink}>
       <div className={style.blogPreview}>
         <h3>{props.title}</h3>
         <div>

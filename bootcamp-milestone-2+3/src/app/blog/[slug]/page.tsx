@@ -8,7 +8,7 @@ export default function BlogPost() {
   const params = useParams();
   const slug = params.slug; // gets 'introduction-to-ai' or 'magic-of-recursion'
 
-  const blog = blogs.find((b) => b.href === slug);
+  const blog = blogs.find((b) => b.slug === slug);
 
   if (!blog) {
     return <div>Blog not found</div>;
