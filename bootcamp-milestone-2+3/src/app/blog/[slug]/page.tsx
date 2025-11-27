@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function BlogPost() {
   const params = useParams();
-  const slug = params.slug; // gets 'introduction-to-ai' or 'magic-of-recursion'
+  const slug = params.slug; 
 
   const blog = blogs.find((b) => b.slug === slug);
 
