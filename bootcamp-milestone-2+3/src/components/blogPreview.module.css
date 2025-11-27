@@ -19,15 +19,15 @@
 
 .blogPreview h3 {
   font-size: 1.5rem;
-  font-weight: 700; /* bold */
+  font-weight: 700; 
   margin-bottom: 10px;
-  color: #1a73e8; /* blue-ish link color */
+  color: #1a73e8; 
   cursor: pointer;
   transition: color 0.2s;
 }
 
 .blogPreview h3:hover {
-  color: #0c47a1; /* darker blue on hover */
+  color: #0c47a1; 
 }
 
 .blogPreview p {
@@ -35,5 +35,5 @@
 }
 
 .blogLink {
-  text-decoration: none; /* remove default link underline */
+  text-decoration: none; 
 }

@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-type Blog = {
+export type Blog = {
   title: string;
   date: Date;
   description: string;
