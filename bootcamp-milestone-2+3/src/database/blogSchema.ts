@@ -27,7 +27,7 @@ const blogSchema = new Schema<Blog>({
     comments: { type: [commentSchema], default: [] }
 })
 
-const Blog = mongoose.models['blogs'] ||
-    mongoose.model('blogs', blogSchema);
+const Blog = mongoose.models['blogs'] || mongoose.model('blogs', blogSchema);
+
 
 export default Blog;

@@ -3,6 +3,7 @@ import BlogModel from "../../../database/blogSchema";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import Comment, { IComment } from "../../../components/Comments";
+import CommentFrom from "../../../components/CommentForm";
 import type { Blog } from "../../../database/blogSchema";
 
 type Props = {
@@ -50,6 +51,9 @@ export default async function Blog({ params }: Props) {
         ) : (
           <p>No comments yet</p>
         )}
+
+        
+        <CommentFrom blogSlug={slug} />
       </section>
     </main>
   );
